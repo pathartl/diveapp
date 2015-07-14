@@ -1,0 +1,30 @@
+<ion-view view-title="Settings">
+  <ion-content>
+    <ion-list>
+
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="admin" ng-model="settings.username">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="password" ng-model="settings.password">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="admin@example.com" ng-model="settings.email">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Subsonic Server</span>
+                <input type="url" placeholder="http://demo.subsonic.org/" ng-model="settings.server">
+            </label>
+
+            <ion-toggle ng-model="settings.alphabetSeparators">
+                Alphabet Separators
+            </ion-toggle>
+        </div>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

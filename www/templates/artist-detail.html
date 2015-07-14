@@ -1,0 +1,26 @@
+<!--
+    This template loads for the 'tab.friend-detail' state (app.js)
+    'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+    The FriendsCtrl pulls data from the Friends service (service.js)
+    The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{artist.name}}">
+    <ion-content>
+        <img class="coverart-full" ng-src="{{album.artUrl}}">
+        <ul class="list">
+            <li class="item item-divider">
+                {{album.name}}
+            </li>
+            <ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="album in artist.album" type="item-text-wrap" href="#/tab/artists/{{artist.id}}/album/{{album.id}}">
+                <img ng-src="{{album.coverArt | getCoverArt:80}}">
+                <h2>{{album.name}}</h2>
+                <p>{{album.artist}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ul>
+    </ion-content>
+</ion-view>

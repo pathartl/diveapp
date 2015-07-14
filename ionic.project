@@ -1,0 +1,12 @@
+{
+  "name": "dive",
+  "app_id": "71581440",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

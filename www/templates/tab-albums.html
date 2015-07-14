@@ -1,0 +1,16 @@
+<ion-view view-title="Albums">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="album in albums" type="item-text-wrap" href="#/tab/albums/{{album.id}}">
+                <img ng-src="{{album.coverArt | getCoverArt:80}}">
+                <h2>{{album.name}}</h2>
+                <p>{{album.artist}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+<!--                 <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button> -->
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

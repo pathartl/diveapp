@@ -1,0 +1,26 @@
+<ion-view view-title="Queue">
+    <ion-content>
+        <ion-list show-reorder="true">
+            <ion-item class="item-thumbnail-left item-icon-right" type="item-text-wrap" ng-repeat="song in queue">
+                <img ng-src="{{song.coverArt | getCoverArt:80}}">
+                <h2>{{song.title}}</h2>
+                <h4>{{song.album}}</h4>
+                <p>{{song.artist}}</p>
+                <!-- <i class="icon ion-ios-drag icon-accessory"></i> -->
+
+<!--                 <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                    Delete
+                </ion-option-button> -->
+                <ion-reorder-button class="ion-navicon" on-reorder="moveItem(song, $fromIndex, $toIndex)"></ion-reorder-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+<ion-footer-bar class="bar-assertive">
+    <div class="button-bar">
+        <button class="button icon ion-ios-play" on-tap="queue.play()"> Play</button>
+        <button class="button icon ion-ios-trash" on-tap="queue.clear()"> Clear</button>
+        <button class="button icon ion-ios-shuffle-strong" on-tap="queue.shuffle()"> Shuffle</button>
+    </div>
+</ion-footer-bar>
+</ion-view>
